@@ -1,0 +1,15 @@
+PODS:
+  - lottie-ios (1.5.1)
+  - LTMorphingLabel (0.5.6)
+
+DEPENDENCIES:
+  - lottie-ios (= 1.5.1)
+  - LTMorphingLabel
+
+SPEC CHECKSUMS:
+  lottie-ios: f680a7c4cb7a567ecf258fde0f967913aff111b8
+  LTMorphingLabel: bdb51d4682e9822da89da6f567bd8aa456fd6650
+
+PODFILE CHECKSUM: 7ba6df7ffb59df4057f9722318da6781ee50dc7f
+
+COCOAPODS: 1.3.1
