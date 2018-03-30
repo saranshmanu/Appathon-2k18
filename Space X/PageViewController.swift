@@ -13,14 +13,16 @@ class PageViewController: UIPageViewController {
     fileprivate lazy var pages: [UIViewController] = {
         return [
             self.getViewController(withIdentifier: "page1"),
-            self.getViewController(withIdentifier: "page2"),
-            self.getViewController(withIdentifier: "page3"),
-            self.getViewController(withIdentifier: "page4")
+            self.getViewController(withIdentifier: "page2")
         ]
     }()
     
     fileprivate func getViewController(withIdentifier identifier: String) -> UIViewController{
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: identifier)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     }
 
     override func viewDidLoad() {
@@ -31,7 +33,7 @@ class PageViewController: UIPageViewController {
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -55,6 +57,9 @@ extension PageViewController: UIPageViewControllerDataSource{
         guard nextIndex < pages.count else { return pages.first }
         guard pages.count > nextIndex else { return nil         }
         return pages[nextIndex]
+    }
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        print("hey")
     }
 }
 extension PageViewController: UIPageViewControllerDelegate { }
