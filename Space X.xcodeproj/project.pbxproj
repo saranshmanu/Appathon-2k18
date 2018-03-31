@@ -20,7 +20,8 @@
 		9565D204206E956900454984 /* Gotham-Medium(1).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9565D1FC206E8F0D00454984 /* Gotham-Medium(1).ttf */; };
 		9565D206206E9FDA00454984 /* PlantImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9565D205206E9FDA00454984 /* PlantImageCollectionViewCell.swift */; };
 		9565D208206EAC7D00454984 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9565D207206EAC7D00454984 /* PageViewController.swift */; };
-		9565D20A206EC40B00454984 /* stars.json in Resources */ = {isa = PBXBuildFile; fileRef = 9565D209206EC40B00454984 /* stars.json */; };
+		9565D20E206F6D7100454984 /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9565D20D206F6D7100454984 /* OverlayViewController.swift */; };
+		9565D217206F735300454984 /* fullstars.json in Resources */ = {isa = PBXBuildFile; fileRef = 9565D216206F735300454984 /* fullstars.json */; };
 		95DD1DA0206E2F24000361DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DD1D9F206E2F24000361DB /* AppDelegate.swift */; };
 		95DD1DA2206E2F24000361DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DD1DA1206E2F24000361DB /* ViewController.swift */; };
 		95DD1DA5206E2F24000361DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95DD1DA3206E2F24000361DB /* Main.storyboard */; };
@@ -62,7 +63,8 @@
 		9565D1FD206E947000454984 /* PlantInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInformationViewController.swift; sourceTree = "<group>"; };
 		9565D205206E9FDA00454984 /* PlantImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		9565D207206EAC7D00454984 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		9565D209206EC40B00454984 /* stars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stars.json; sourceTree = "<group>"; };
+		9565D20D206F6D7100454984 /* OverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayViewController.swift; sourceTree = "<group>"; };
+		9565D216206F735300454984 /* fullstars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fullstars.json; sourceTree = "<group>"; };
 		95DD1D9C206E2F24000361DB /* Space X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95DD1D9F206E2F24000361DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95DD1DA1206E2F24000361DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,15 +164,16 @@
 				95DD1DA3206E2F24000361DB /* Main.storyboard */,
 				9565D1F7206E5B2900454984 /* Dense-Regular.otf */,
 				9565D1FA206E8F0D00454984 /* GOTHAM-BOLD.TTF */,
+				9565D216206F735300454984 /* fullstars.json */,
 				9565D1FB206E8F0D00454984 /* GOTHAM-LIGHT.TTF */,
 				9565D1FC206E8F0D00454984 /* Gotham-Medium(1).ttf */,
 				95DD1DA6206E2F24000361DB /* Assets.xcassets */,
 				95DD1DA8206E2F24000361DB /* LaunchScreen.storyboard */,
-				9565D209206EC40B00454984 /* stars.json */,
 				95DD1DAB206E2F24000361DB /* Info.plist */,
 				9565D1FD206E947000454984 /* PlantInformationViewController.swift */,
 				9565D205206E9FDA00454984 /* PlantImageCollectionViewCell.swift */,
 				9565D207206EAC7D00454984 /* PageViewController.swift */,
+				9565D20D206F6D7100454984 /* OverlayViewController.swift */,
 			);
 			path = "Space X";
 			sourceTree = "<group>";
@@ -315,8 +318,8 @@
 				9565D1F8206E5B3300454984 /* Dense-Regular.otf in Resources */,
 				95DD1DAA206E2F24000361DB /* LaunchScreen.storyboard in Resources */,
 				95DD1DA7206E2F24000361DB /* Assets.xcassets in Resources */,
+				9565D217206F735300454984 /* fullstars.json in Resources */,
 				95DD1DA5206E2F24000361DB /* Main.storyboard in Resources */,
-				9565D20A206EC40B00454984 /* stars.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +503,7 @@
 				95DD1DA2206E2F24000361DB /* ViewController.swift in Sources */,
 				95DD1DA0206E2F24000361DB /* AppDelegate.swift in Sources */,
 				9565D208206EAC7D00454984 /* PageViewController.swift in Sources */,
+				9565D20E206F6D7100454984 /* OverlayViewController.swift in Sources */,
 				9565D206206E9FDA00454984 /* PlantImageCollectionViewCell.swift in Sources */,
 				9565D1FE206E947000454984 /* PlantInformationViewController.swift in Sources */,
 			);

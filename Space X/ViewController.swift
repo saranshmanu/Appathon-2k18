@@ -54,7 +54,6 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
     
     @IBOutlet weak var numberOfPlants: LTMorphingLabel!
     @IBOutlet weak var specieName: LTMorphingLabel!
-    
     @IBOutlet weak var textView: UIView!
     @IBOutlet weak var circularView: UIView!
     
@@ -72,9 +71,16 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.imageView?.transform = CGAffineTransform(scaleX: 10, y: 10)
         thisIsAText.transform = CGAffineTransform(rotationAngle: CGFloat.pi/2)
         thisIsAText.transform = CGAffineTransform(rotationAngle: CGFloat.pi/2)
         animateText(text: textArray[selected], numberOfSpecie: specieNumber[selected])
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 0.4, animations: {() -> Void in
+            self.imageView?.transform = CGAffineTransform(scaleX: 1, y: 1)
+        })
     }
     
     var i = -1
