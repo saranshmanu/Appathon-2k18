@@ -9,7 +9,5 @@
 import UIKit
 
 class PlantImageCollectionViewCell: UICollectionViewCell {
-    
     @IBOutlet weak var plantImage: UIImageView!
-    
 }

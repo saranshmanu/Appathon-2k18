@@ -13,7 +13,8 @@ class PageViewController: UIPageViewController {
     fileprivate lazy var pages: [UIViewController] = {
         return [
             self.getViewController(withIdentifier: "page1"),
-            self.getViewController(withIdentifier: "page2")
+            self.getViewController(withIdentifier: "page2"),
+            self.getViewController(withIdentifier: "page3")
         ]
     }()
     

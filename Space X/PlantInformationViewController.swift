@@ -10,7 +10,24 @@ import UIKit
 
 var images = ["Sq1", "Sq2", "Sq3"]
 
-class PlantInformationViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class PlantInformationViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate {
+    
+    @IBOutlet weak var plantImage: UIImageView!
+    
+    func addParallaxToBackground(){
+        let min = CGFloat(-20)
+        let max = CGFloat(20)
+        let xMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.x", type: .tiltAlongHorizontalAxis)
+        xMotion.minimumRelativeValue = min
+        xMotion.maximumRelativeValue = max
+        let yMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.y", type: .tiltAlongVerticalAxis)
+        yMotion.minimumRelativeValue = min
+        yMotion.maximumRelativeValue = max
+        let motionEffectGroup = UIMotionEffectGroup()
+        motionEffectGroup.motionEffects = [xMotion,yMotion]
+        plantImage.addMotionEffect(motionEffectGroup)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }
@@ -21,12 +38,12 @@ class PlantInformationViewController: UIViewController, UICollectionViewDataSour
         return cell
     }
     
-
     @IBOutlet weak var collecView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         collecView.delegate = self
         collecView.dataSource = self
+        addParallaxToBackground()
     }
 
     override func didReceiveMemoryWarning() {

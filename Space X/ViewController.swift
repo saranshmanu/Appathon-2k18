@@ -24,7 +24,7 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
         UIView.animate(withDuration: 0.4, animations: {() -> Void in
             self.imageView?.transform = CGAffineTransform(scaleX: 10, y: 10)
         }, completion: {(_ finished: Bool) -> Void in
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "plantInformation") as! PageViewController
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "page") as! UIViewController
             self.present(vc, animated: true, completion: nil)
         })
     }
