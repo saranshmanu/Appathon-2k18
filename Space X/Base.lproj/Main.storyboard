@@ -233,6 +233,7 @@
                                         <state key="normal" image="WhiteInfo"/>
                                         <connections>
                                             <action selector="change:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqw-Hx-3kA"/>
+                                            <segue destination="xyx-ko-u83" kind="show" id="FNg-8S-lOP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXS-qV-Anl">
@@ -712,6 +713,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlU-C8-crY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1917.5999999999999" y="66.566716641679164"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UlP-Jw-Jgu">
+            <objects>
+                <viewController id="xyx-ko-u83" customClass="ARViewController" customModule="Space_X" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jec-uN-5l8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j6y-lA-Bbv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwC-HG-ZnK">
+                                <rect key="frame" x="0.0" y="616" width="375" height="51"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="MYK-AH-oLF"/>
+                                </constraints>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeAR:" destination="xyx-ko-u83" eventType="touchUpInside" id="Skg-Ct-H3n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j6y-lA-Bbv" firstAttribute="bottom" secondItem="u31-Nw-b5X" secondAttribute="bottom" id="A3c-3t-DY7"/>
+                            <constraint firstItem="nwC-HG-ZnK" firstAttribute="leading" secondItem="u31-Nw-b5X" secondAttribute="leading" id="ApG-6V-O0a"/>
+                            <constraint firstItem="j6y-lA-Bbv" firstAttribute="leading" secondItem="u31-Nw-b5X" secondAttribute="leading" id="IjK-32-DCt"/>
+                            <constraint firstItem="j6y-lA-Bbv" firstAttribute="trailing" secondItem="u31-Nw-b5X" secondAttribute="trailing" id="Kx9-97-eE9"/>
+                            <constraint firstItem="nwC-HG-ZnK" firstAttribute="trailing" secondItem="u31-Nw-b5X" secondAttribute="trailing" id="Vzg-wm-qD9"/>
+                            <constraint firstItem="j6y-lA-Bbv" firstAttribute="top" secondItem="Jec-uN-5l8" secondAttribute="top" id="Wwz-zT-Lz4"/>
+                            <constraint firstItem="nwC-HG-ZnK" firstAttribute="bottom" secondItem="u31-Nw-b5X" secondAttribute="bottom" id="vai-Kp-uKS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u31-Nw-b5X"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="j6y-lA-Bbv" id="ScB-za-eKt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hqR-3x-HEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2852" y="-28.335832083958024"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="WkY-jd-aQR">
